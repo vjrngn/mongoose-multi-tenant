@@ -40,12 +40,6 @@ async function db(orgId: string) {
     },
   });
 
-  if (!conn.models['Post']) {
-    conn.model('Post', {
-      title: String
-    });
-  }
-
   _cache.set(orgId, conn);
 
   return conn;
